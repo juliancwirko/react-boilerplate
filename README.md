@@ -15,7 +15,7 @@ This is a simple React boilerplate with:
 
 You need to install Webpack `npm install -g webpack`
 
-- git clone git@github.com:juliancwirko/react-boilerplate.git
+- git clone https://github.com/juliancwirko/react-boilerplate.git
 - cd react-boilerplate
 - npm install
 - webpack -w
