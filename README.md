@@ -1,4 +1,4 @@
-## react-s-grid
+## react-boilerplate
 
 React Boilerplate with s-Grid and Webpack
 
