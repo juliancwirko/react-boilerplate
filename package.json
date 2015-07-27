@@ -1,6 +1,6 @@
 {
   "name": "react-boilerplate",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "React Boilerplate with s-Grid and Webpack",
   "main": "index.js",
   "scripts": {
