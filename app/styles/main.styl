@@ -1,0 +1,26 @@
+
+@import 'normalize'
+
+// more info http://s-grid.meteor.com
+@import 's-grid-settings'
+@import 's-grid-functions'
+// @import 's-grid-classes' if needed
+
+@import 'settings'
+@import 'helpers'
+
+@import 'spinner'
+
+
+.container
+    max-width rem-calc(1000)
+    margin 0 auto
+
+.header
+    height rem-calc(80)
+    line-height rem-calc(80)
+
+.custom-grid
+    grid()
+    .custom-cell
+        cell(1, 2)
