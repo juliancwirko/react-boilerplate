@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 
 import {Router, RouteHandler} from 'react-router';
 
