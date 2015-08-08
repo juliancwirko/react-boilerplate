@@ -1,7 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-var Spinner = React.createClass({
-    render: function () {
+class Spinner extends React.Component {
+    render() {
         return (
             <div className="sk-cube-grid">
                 <div className="sk-cube sk-cube1"></div>
@@ -16,6 +16,6 @@ var Spinner = React.createClass({
             </div>
         )
     }
-});
+}
 
-module.exports = Spinner;
+export default Spinner;

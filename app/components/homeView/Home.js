@@ -1,14 +1,23 @@
-var React = require('react');
+import React from 'react';
+import {Link} from 'react-router';
 
-var Home = React.createClass({
-    render: function () {
+class Home extends React.Component {
+    render() {
         return (
             <div className="custom-grid">
-                <div className="custom-cell"><a href="./index.html#/route-1/user-1">User 1</a></div>
-                <div className="custom-cell"><a href="./index.html#/route-1/user-2">User 2</a></div>
+                <div className="custom-cell">
+                    <Link to='route-1' params={{username: 'user-1'}}>
+                        User 1
+                    </Link>
+                </div>
+                <div className="custom-cell">
+                    <Link to='route-1' params={{username: 'user-2'}}>
+                        User 2
+                    </Link>
+                </div>
             </div>
         )
     }
-});
+}
 
-module.exports = Home;
+export default Home;

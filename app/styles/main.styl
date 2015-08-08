@@ -1,7 +1,7 @@
 
 @import 'normalize'
 
-// more info http://s-grid.meteor.com
+// more info https://github.com/juliancwirko/s-grid
 @import 's-grid-settings'
 @import 's-grid-functions'
 // @import 's-grid-classes' if needed
@@ -24,3 +24,5 @@
     grid()
     .custom-cell
         cell(1, 2)
+        +below(rem-calc(768))
+            cell(1, 1)

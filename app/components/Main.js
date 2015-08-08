@@ -1,44 +1,25 @@
-var React = require('react');
-var Router = require('react-router');
-var _ = require('lodash');
-var RouteHandler = require('react-router').RouteHandler;
+import React from 'react';
+import _ from 'lodash';
 
-var Main = React.createClass({
-    mixins: [Router.State],
-    getInitialState: function () {
-        return {
-            isHome: false
-        }
-    },
-    init: function () {
-        this.setState({
-            isHome: _.isEmpty(this.getParams())
-        });
-    },
-    componentDidMount: function () {
-        this.init();
-    },
-    componentWillReceiveProps: function () {
-        this.init();
-    },
-    render: function () {
+import {Router, RouteHandler} from 'react-router';
+
+class Main extends React.Component {
+    render() {
         return (
             <div>
                 <header className="header">
                     <div className="container">
-                        {this.state.isHome ? <div>
-                            This is homepage
-                        </div> : <div>This is subpage</div>}
+                        Demo App
                     </div>
                 </header>
                 <section>
                     <div className="container">
-                        <RouteHandler />
+                        <RouteHandler {...this.props} />
                     </div>
                 </section>
             </div>
         )
     }
-});
+}
 
-module.exports = Main;
+export default Main;

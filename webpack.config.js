@@ -1,4 +1,5 @@
 var sGrid = require('s-grid');
+var rupture = require('rupture');
 var autoprefixerStylus = require('autoprefixer-stylus');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -15,14 +16,22 @@ module.exports = {
                 loader: 'babel'
             },
             {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'eslint-loader'
+            },
+            {
                 test: /\.styl$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: ExtractTextPlugin.extract('style-loader', 'css-loader!stylus-loader')
             }
         ]
     },
+    eslint: {
+        configFile: '.eslintrc'
+    },
     stylus: {
-        use: [sGrid(), autoprefixerStylus()]
+        use: [sGrid(), rupture(), autoprefixerStylus()]
     },
     plugins: [
         new ExtractTextPlugin('public/style.css', {

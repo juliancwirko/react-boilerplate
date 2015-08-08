@@ -1,8 +1,8 @@
-var React = require('react');
-var Router = require('react-router');
-var routes = require('./routes');
-var css = require('./styles/main.styl');
+import React from 'react';
+import Router from 'react-router';
+import routes from './routes';
+import css from './styles/main.styl';
 
-Router.run(routes, function (Root) {
-    React.render(<Root />, document.getElementById('app'));
+Router.run(routes, (Root, state) => {
+    React.render(<Root {...state} />, document.getElementById('app'));
 });

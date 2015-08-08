@@ -1,4 +1,4 @@
-var axios = require('axios');
+import axios from 'axios';
 
 //
 // get user info by user name
@@ -6,8 +6,8 @@ var axios = require('axios');
 // remember to provide your GitHub token credentials
 //
 
-var getUserInfo = function (username) {
-    return axios.get('https://api.github.com/users/' + username, {
+var getUserInfo = (username) => {
+    return axios.get(`https://api.github.com/users/${username}`, {
         headers: {
             'Authorization': 'token [your github token here]'
         }
@@ -15,8 +15,8 @@ var getUserInfo = function (username) {
 };
 
 // get user repos by user name
-var getUserRepos = function (username) {
-    return axios.get('https://api.github.com/users/' + username + '/repos?per_page=100', {
+var getUserRepos = (username) => {
+    return axios.get(`https://api.github.com/users/${username}/repos?per_page=100`, {
         headers: {
             'Authorization': 'token [your github token here]'
         }
@@ -24,9 +24,9 @@ var getUserRepos = function (username) {
 };
 
 var helpers = {
-    getGitHubUserData: function (username) {
+    getGitHubUserData(username) {
         return axios.all([getUserInfo(username), getUserRepos(username)])
-            .then(function (result) {
+            .then((result) => {
                 return {
                     userInfo: result[0].data,
                     userRepos: result[1].data
@@ -35,4 +35,4 @@ var helpers = {
     }
 };
 
-module.exports = helpers;
+export default helpers;

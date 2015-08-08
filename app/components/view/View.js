@@ -1,16 +1,37 @@
-var React = require('react');
-var Router = require('react-router');
+import React from 'react';
+import {Router, Link} from 'react-router';
 
-var View = React.createClass({
-    mixins: [Router.State],
-    render: function () {
-        var username = this.getParams().username;
+class View extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            userInfo: '',
+            userRepos: ''
+        }
+    }
+    init() {
+       //
+       // you can get your data from github here see: helpers.js file
+       //
+       // helpers.getGitHubUserData(this.props.params.username).then((data) => {
+       //     this.setState({
+       //         userInfo: data.userInfo,
+       //         userRepos: data.userRepos
+       //     });
+       // });
+       //
+    }
+    componentDidMount() {
+        this.init();
+    }
+    render() {
+        // username param from router state
         return (
             <div className="view">
-                {username}
+                {this.props.params.username} <Link to='default'>[back]</Link>
             </div>
         )
     }
-});
+};
 
-module.exports = View;
+export default View;
