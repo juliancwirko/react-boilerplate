@@ -2,11 +2,18 @@ var sGrid = require('s-grid');
 var rupture = require('rupture');
 var autoprefixerStylus = require('autoprefixer-stylus');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var path = require('path');
 
 module.exports = {
     entry: './app/App.js',
     output: {
-        filename: 'public/bundle.js'
+        path: path.resolve(__dirname, 'public'),
+        filename: 'bundle.js'
+    },
+    devServer: {
+        port: 3000,
+        contentBase: './public',
+        historyApiFallback: true
     },
     module: {
         loaders: [
@@ -23,7 +30,7 @@ module.exports = {
             {
                 test: /\.styl$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!stylus-loader')
+                loader: 'style!css-loader!stylus-loader'
             }
         ]
     },
@@ -32,10 +39,5 @@ module.exports = {
     },
     stylus: {
         use: [sGrid(), rupture(), autoprefixerStylus()]
-    },
-    plugins: [
-        new ExtractTextPlugin('public/style.css', {
-            allChunks: true
-        })
-    ]
+    }
 };

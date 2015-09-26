@@ -13,20 +13,13 @@ This is a simple React boilerplate with:
 
 ## Usage
 
-You need to install Webpack `npm install -g webpack`
-
 - git clone https://github.com/juliancwirko/react-boilerplate.git
 - cd react-boilerplate
 - npm install
-- webpack -w
-- go to public folder and open index.html in the browser
+- npm start
+- go to: localhost:3000
 
-You can also use [webpack-dev-server](http://webpack.github.io/docs/tutorials/getting-started/#development-server)
-
-- 'npm install webpack-dev-server -g'
-- go to react-boilerplate/public folder
-- run 'webpack-dev-server'
-- go to 'localhost:8080'
+There should be live reload too.
 
 More info and documentation soon. There will be also a tutorial in a blog post. Stay tuned.
 
@@ -36,5 +29,6 @@ MIT
 
 ### Changelog
 
+- 0.2.0 webpack-dev-server config and updates
 - 0.1.0 es6 refactor, eslint added
 - 0.0.1 init
