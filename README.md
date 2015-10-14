@@ -29,6 +29,7 @@ MIT
 
 ### Changelog
 
+- 0.2.1 sGrid and autoprefixer update
 - 0.2.0 webpack-dev-server config and updates
 - 0.1.0 es6 refactor, eslint added
 - 0.0.1 init
