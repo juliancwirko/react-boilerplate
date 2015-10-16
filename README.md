@@ -1,27 +1,31 @@
 ## react-boilerplate
 
-React Boilerplate with s-Grid and Webpack
+React Boilerplate with sGrid and Webpack
 
 This is a simple React boilerplate with:
 
 - [React Router](https://www.npmjs.com/package/react-router)
 - [Stylus](https://www.npmjs.com/package/stylus)
 - [autoprefixer-stylus](https://www.npmjs.com/package/autoprefixer-stylus)
-- [s-Grid - my own flexbox grid](https://www.npmjs.com/package/s-grid)
+- [sGrid - my own Flexbox grid for Stylus](https://stylusgrid.com)
 - [Webpack](https://www.npmjs.com/package/webpack)
 - [axios](https://www.npmjs.com/package/axios)
 
 ## Usage
 
-- git clone https://github.com/juliancwirko/react-boilerplate.git
-- cd react-boilerplate
-- npm install
-- npm start
-- go to: localhost:3000
+```
+$ git clone https://github.com/juliancwirko/react-boilerplate.git
+$ cd react-boilerplate
+$ npm install
+$ npm start
+```
+...and go to: http://localhost:3000
 
 There should be live reload too.
 
-More info and documentation soon. There will be also a tutorial in a blog post. Stay tuned.
+### Grid docs
+
+- [stylusgrid.com](http://stylusgrid.com)
 
 ### License
 
