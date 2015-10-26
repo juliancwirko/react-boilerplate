@@ -1,31 +1,31 @@
 var sGrid = require('s-grid');
 var rupture = require('rupture');
 var autoprefixerStylus = require('autoprefixer-stylus');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
+var webpack = require('webpack');
+
+require('es6-promise').polyfill();
 
 module.exports = {
-    entry: './app/App.js',
+    entry: [
+        'webpack-dev-server/client?http://localhost:3000',
+        'webpack/hot/only-dev-server',
+        './app/App.js'
+    ],
     output: {
         path: path.resolve(__dirname, 'public'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: '/'
     },
-    devServer: {
-        port: 3000,
-        contentBase: './public',
-        historyApiFallback: true
-    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
     module: {
         loaders: [
             {
-                test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'babel'
-            },
-            {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: 'eslint-loader'
+                loaders: ['react-hot', 'babel', 'eslint-loader']
             },
             {
                 test: /\.styl$/,

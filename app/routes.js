@@ -2,11 +2,11 @@ import React from 'react';
 import Main from './components/Main';
 import Home from './components/homeView/Home';
 import View from './components/view/View';
-import {Router, Route, DefaultRoute} from 'react-router';
+import {Route, IndexRoute} from 'react-router';
 
 export default (
-    <Route name="app" path="/" handler={Main}>
-        <Route name="route-1" path="route-1/:username" handler={View} />
-        <DefaultRoute name="default" handler={Home} />
+    <Route path="/" component={Main}>
+        <IndexRoute component={Home} />
+        <Route path="route-1/:username" component={View} />
     </Route>
 );

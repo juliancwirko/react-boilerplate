@@ -1,10 +1,10 @@
 
 @import 'normalize'
 
-// more info https://github.com/juliancwirko/s-grid
+// more info http://stylusgrid.com
 @import 's-grid-settings'
 @import 's-grid-functions'
-// @import 's-grid-classes' if needed
+@import 's-grid-classes'
 
 @import 'settings'
 @import 'helpers'
@@ -13,8 +13,7 @@
 
 
 .container
-    max-width rem-calc(1000)
-    margin 0 auto
+    center(1000px)
 
 .header
     height rem-calc(80)
@@ -25,4 +24,7 @@
     .custom-cell
         cell(1, 2)
         +below(rem-calc(768))
-            cell(1, 1)
+            stack()
+
+.sialala
+    color red

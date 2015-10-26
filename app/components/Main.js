@@ -11,11 +11,8 @@ class Main extends React.Component {
     }
     init() {
         this.setState({
-            isHome: _.isEmpty(this.router.getCurrentParams())
+            isHome: _.isEmpty(this.props.params)
         });
-    }
-    componentWillMount() {
-        this.router = this.context.router;
     }
     componentDidMount() {
         this.init();
@@ -36,16 +33,12 @@ class Main extends React.Component {
                 </header>
                 <section>
                     <div className="container">
-                        <RouteHandler {...this.props} />
+                        {this.props.children}
                     </div>
                 </section>
             </div>
         )
     }
 }
-
-Main.contextTypes = {
-    router: React.PropTypes.func.isRequired
-};
 
 export default Main;

@@ -1,6 +1,6 @@
 ## react-boilerplate
 
-React Boilerplate with s-Grid and Webpack
+React Boilerplate with s-Grid, Webpack and Hot Module Replacement configuration.
 
 This is a simple React boilerplate with:
 
@@ -9,6 +9,7 @@ This is a simple React boilerplate with:
 - [autoprefixer-stylus](https://www.npmjs.com/package/autoprefixer-stylus)
 - [s-Grid - my own flexbox grid](https://www.npmjs.com/package/s-grid)
 - [Webpack](https://www.npmjs.com/package/webpack)
+- [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
 - [axios](https://www.npmjs.com/package/axios)
 
 ## Usage
@@ -19,9 +20,9 @@ This is a simple React boilerplate with:
 - npm start
 - go to: localhost:3000
 
-There should be live reload too.
-
 More info and documentation soon. There will be also a tutorial in a blog post. Stay tuned.
+
+For now this is a basic React boilerplate. PR are welcomed.
 
 ### License
 
@@ -29,6 +30,7 @@ MIT
 
 ### Changelog
 
+- 0.3.0 React 0.14, React-Router 1.0.0-rc3, HMR config, different server config, other updates
 - 0.2.1 sGrid and autoprefixer update
 - 0.2.0 webpack-dev-server config and updates
 - 0.1.0 es6 refactor, eslint added

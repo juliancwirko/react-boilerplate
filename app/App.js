@@ -1,8 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Router from 'react-router';
 import routes from './routes';
 import css from './styles/main.styl';
 
-Router.run(routes, Router.HistoryLocation, (Root, state) => {
-    React.render(<Root {...state} />, document.getElementById('app'));
-});
+import createBrowserHistory from 'history/lib/createBrowserHistory';
+let history = createBrowserHistory();
+
+ReactDOM.render(<Router routes={routes} history={history} />, document.getElementById('app'));
