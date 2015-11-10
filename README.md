@@ -36,6 +36,7 @@ MIT
 
 ### Changelog
 
+- 0.4.0 React, ReactRouter, Babel and other updates
 - 0.3.1 sGrid update
 - 0.3.0 React 0.14, React-Router 1.0.0-rc3, HMR config, different server config, other updates
 - 0.2.1 sGrid and autoprefixer update

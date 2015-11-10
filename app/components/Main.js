@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import {Router, RouteHandler} from 'react-router';
+import {Router} from 'react-router';
 
 class Main extends React.Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class Main extends React.Component {
     }
     init() {
         this.setState({
-            isHome: _.isEmpty(this.props.params)
+            isHome: this.props.history.isActive('/', {}, true)
         });
     }
     componentDidMount() {

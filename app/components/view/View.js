@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Link} from 'react-router';
+import {Link} from 'react-router';
 
 class View extends React.Component {
     constructor(props) {

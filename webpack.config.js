@@ -25,7 +25,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
-                loaders: ['react-hot', 'babel', 'eslint-loader']
+                loaders: ['react-hot', 'babel']
             },
             {
                 test: /\.styl$/,
@@ -33,9 +33,6 @@ module.exports = {
                 loader: 'style!css-loader!stylus-loader'
             }
         ]
-    },
-    eslint: {
-        configFile: '.eslintrc'
     },
     stylus: {
         use: [sGrid(), rupture(), autoprefixerStylus()]
