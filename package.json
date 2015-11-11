@@ -1,6 +1,6 @@
 {
   "name": "react-boilerplate",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "React Boilerplate with sGrid, Webpack and Babel",
   "scripts": {
     "start": "node server.js"
@@ -22,7 +22,7 @@
     "react-dom": "~0.14.2",
     "react-router": "~1.0.0",
     "rupture": "~0.6.1",
-    "s-grid": "~1.1.1",
+    "s-grid": "~1.1.2",
     "history": "~1.13.0"
   },
   "devDependencies": {

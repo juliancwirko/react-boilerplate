@@ -36,6 +36,7 @@ MIT
 
 ### Changelog
 
+- 0.4.2 sGrid update
 - 0.4.1 Webpack, Babel updates
 - 0.4.0 React, ReactRouter, Babel and other updates
 - 0.3.1 sGrid update
