@@ -10,6 +10,7 @@ This is a simple React boilerplate with:
 - [sGrid - my own Flexbox grid for Stylus](https://stylusgrid.com)
 - [Webpack](https://www.npmjs.com/package/webpack)
 - [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
+- [Jest](https://facebook.github.io/jest/)
 - [axios](https://www.npmjs.com/package/axios)
 
 ## Usage
