@@ -24,6 +24,14 @@ $ npm start
 
 More info and documentation soon. There will be also a tutorial in a blog post. Stay tuned.
 
+## Prepare Dist
+
+If you are ready to prepare your production files. You can run `npm run dist`. Webpack will bundle and save the `.js` file in the `public` folder.
+
+## Tests
+
+It uses [Jest](https://facebook.github.io/jest/) config. If you want to run tests put your test files in the `__tests__` folder and run `npm test`. (Jest needs Node in version at least 4).
+
 ### Grid docs
 
 - [stylusgrid.com](http://stylusgrid.com)
@@ -36,6 +44,7 @@ MIT
 
 ### Changelog
 
+- 0.5.0 Jest config added (testing); build task
 - 0.4.2 sGrid update
 - 0.4.1 Webpack, Babel updates
 - 0.4.0 React, ReactRouter, Babel and other updates
