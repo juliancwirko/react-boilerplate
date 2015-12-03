@@ -45,6 +45,7 @@ MIT
 
 ### Changelog
 
+- 0.5.1 file-loader/url-loader and dist build fix
 - 0.5.0 Jest config added (testing); build task
 - 0.4.2 sGrid update
 - 0.4.1 Webpack, Babel updates

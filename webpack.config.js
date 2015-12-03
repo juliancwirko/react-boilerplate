@@ -36,6 +36,11 @@ module.exports = {
                 test: /\.styl$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'style!css-loader!stylus-loader'
+            },
+            {
+                test: /\.(png|jpg)$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'url-loader?name=images/[name].[ext]&limit=8192'
             }
         ]
     },

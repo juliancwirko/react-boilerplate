@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
+import file1 from '../../images/287.jpg';
+import file2 from '../../images/286.jpg';
 
 class Home extends React.Component {
     render() {
@@ -9,16 +11,29 @@ class Home extends React.Component {
             user2: 'user-2'
         };
         return (
-            <div className="custom-grid">
-                <div className="custom-cell">
-                    <Link to={`/route-1/${users.user1}`}>
-                        User 1
-                    </Link>
+            <div>
+                <div className="spacing">
+                    <h2>Routing example</h2>
                 </div>
-                <div className="custom-cell">
-                    <Link to={`/route-1/${users.user2}`}>
-                        User 2
-                    </Link>
+                <div className="custom-grid">
+                    <div className="custom-cell">
+                        <Link to={`/route-1/${users.user1}`}>
+                            User 1
+                        </Link>
+                    </div>
+                    <div className="custom-cell">
+                        <Link to={`/route-1/${users.user2}`}>
+                            User 2
+                        </Link>
+                    </div>
+                </div>
+                <hr />
+                <div className="spacing">
+                    <h2>...and some kittens - of course</h2>
+                </div>
+                <div>
+                    <img src={file2} alt="Yay, kittens!" />
+                    <img src={file1} alt="Yay, kittens! I'll be base64 because I am small" />
                 </div>
             </div>
         )
