@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
+import style from './styles';
 
 class View extends React.Component {
     constructor(props) {
@@ -27,7 +28,7 @@ class View extends React.Component {
     render() {
         // username param from router state
         return (
-            <div className="view">
+            <div className={style.view}>
                 {this.props.params.username} <Link to='/'>[back]</Link>
             </div>
         )

@@ -8,10 +8,10 @@ const Spinner = require('../app/components/common/Spinner').default;
 
 describe('Spinner', () => {
     it('checks proper amount of child nodes', () => {
-        var spinner = TestUtils.renderIntoDocument(
+        const spinner = TestUtils.renderIntoDocument(
           <Spinner />
         );
-        var spinnerNode = ReactDOM.findDOMNode(spinner);
+        const spinnerNode = ReactDOM.findDOMNode(spinner);
         expect(spinnerNode.childNodes.length).toEqual(9);
     });
 });

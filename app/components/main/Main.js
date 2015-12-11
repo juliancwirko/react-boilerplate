@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import {Router} from 'react-router';
+import style from './styles';
 
 class Main extends React.Component {
     constructor(props) {
@@ -23,8 +24,8 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <header className="header">
-                    <div className="container">
+                <header className={style.header}>
+                    <div className={style.container}>
                         <span>Demo App: </span>
                         {this.state.isHome ? <span>
                             This is homepage
@@ -32,7 +33,7 @@ class Main extends React.Component {
                     </div>
                 </header>
                 <section>
-                    <div className="container">
+                    <div className={style.container}>
                         {this.props.children}
                     </div>
                 </section>

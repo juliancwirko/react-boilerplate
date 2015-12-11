@@ -1,0 +1,48 @@
+// http://tobiasahlin.com/spinkit/
+
+@import '~s-grid/s-grid-settings'
+@import '~s-grid/s-grid-functions'
+
+.cubeGrid
+    width rem-calc(40)
+    height rem-calc(40)
+    margin rem-calc(100) auto
+.cube
+    width 33%;
+    height 33%;
+    background-color #333
+    float left
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+.cube1
+    composes cube
+    animation-delay 0.2s
+.cube2
+    composes cube
+    animation-delay 0.3s
+.cube3
+    composes cube
+    animation-delay 0.4s
+.cube4
+    composes cube
+    animation-delay 0.1s
+.cube5
+    composes cube
+    animation-delay 0.2s
+.cube6
+    composes cube
+    animation-delay 0.3s
+.cube7
+    composes cube
+    animation-delay 0s
+.cube8
+    composes cube
+    animation-delay 0.1s
+.cube9
+    composes cube
+    animation-delay 0.2s
+
+@keyframes sk-cubeGridScaleDelay
+    0%, 70%, 100%
+        transform scale3D(1, 1, 1)
+    35%
+        transform scale3D(0, 0, 1)

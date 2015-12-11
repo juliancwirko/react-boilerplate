@@ -1,18 +1,19 @@
 import React from 'react';
+import style from './styles';
 
 class Spinner extends React.Component {
     render() {
         return (
-            <div className="sk-cube-grid">
-                <div className="sk-cube sk-cube1"></div>
-                <div className="sk-cube sk-cube2"></div>
-                <div className="sk-cube sk-cube3"></div>
-                <div className="sk-cube sk-cube4"></div>
-                <div className="sk-cube sk-cube5"></div>
-                <div className="sk-cube sk-cube6"></div>
-                <div className="sk-cube sk-cube7"></div>
-                <div className="sk-cube sk-cube8"></div>
-                <div className="sk-cube sk-cube9"></div>
+            <div className={style.cubeGrid}>
+                <div className={style.cube1}></div>
+                <div className={style.cube2}></div>
+                <div className={style.cube3}></div>
+                <div className={style.cube4}></div>
+                <div className={style.cube5}></div>
+                <div className={style.cube6}></div>
+                <div className={style.cube7}></div>
+                <div className={style.cube8}></div>
+                <div className={style.cube9}></div>
             </div>
         )
     }

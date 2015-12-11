@@ -1,6 +1,6 @@
 ## react-boilerplate
 
-React Boilerplate with s-Grid, Webpack and Hot Module Replacement configuration.
+React Boilerplate with sGrid, Webpack and Hot Module Replacement configuration.
 
 This is a simple React boilerplate with:
 
@@ -12,6 +12,8 @@ This is a simple React boilerplate with:
 - [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
 - [Jest](https://facebook.github.io/jest/)
 - [axios](https://www.npmjs.com/package/axios)
+- [PostCSS](https://github.com/postcss/postcss)
+- [CSS Modules](https://github.com/css-modules/css-modules)
 
 ## Usage
 
@@ -33,7 +35,7 @@ If you are ready to prepare your production files. You can run `npm run dist`. W
 
 It uses [Jest](https://facebook.github.io/jest/) config. If you want to run tests put your test files in the `__tests__` folder and run `npm test`. (Jest needs Node in version at least 4).
 
-### Grid docs
+### sGrid docs
 
 - [stylusgrid.com](http://stylusgrid.com)
 
@@ -45,6 +47,7 @@ MIT
 
 ### Changelog
 
+- 0.6.0 [CSS Modules](https://github.com/css-modules/css-modules) approach; PostCSS loader
 - 0.5.1 file-loader/url-loader and dist build fix
 - 0.5.0 Jest config added (testing); build task
 - 0.4.2 sGrid update

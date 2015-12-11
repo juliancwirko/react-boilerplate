@@ -1,6 +1,6 @@
 var sGrid = require('s-grid');
 var rupture = require('rupture');
-var autoprefixerStylus = require('autoprefixer-stylus');
+var autoprefixer = require('autoprefixer');
 var path = require('path');
 var webpack = require('webpack');
 
@@ -35,7 +35,7 @@ module.exports = {
             {
                 test: /\.styl$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: 'style!css-loader!stylus-loader'
+                loader: 'style!css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!postcss!stylus-loader'
             },
             {
                 test: /\.(png|jpg)$/,
@@ -44,7 +44,14 @@ module.exports = {
             }
         ]
     },
-    stylus: {
-        use: [sGrid(), rupture(), autoprefixerStylus()]
+    resolve: {
+        root: path.join(__dirname, '..', 'app'),
+        extensions: ['', '.js', '.jsx', '.json', '.css', '.styl', '.png', '.jpg', '.jpeg', '.gif']
+    },
+    stylus: function () {
+        return [sGrid, rupture]
+    },
+    postcss: function () {
+        return [autoprefixer];
     }
 };
