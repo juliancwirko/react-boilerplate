@@ -6,7 +6,6 @@ This is a simple React boilerplate with:
 
 - [React Router](https://www.npmjs.com/package/react-router)
 - [Stylus](https://www.npmjs.com/package/stylus)
-- [autoprefixer-stylus](https://www.npmjs.com/package/autoprefixer-stylus)
 - [sGrid - my own Flexbox grid for Stylus](http://stylusgrid.com)
 - [Webpack](https://www.npmjs.com/package/webpack)
 - [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
