@@ -7,7 +7,8 @@ class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isHome: true
+            isHome: true,
+            counter: 0
         }
     }
     init() {
@@ -17,6 +18,9 @@ class Main extends React.Component {
     }
     componentDidMount() {
         this.init();
+        setInterval(() => {
+            this.setState({counter: this.state.counter + 1});
+        }, 1000);
     }
     componentWillReceiveProps() {
         this.init();
@@ -28,7 +32,7 @@ class Main extends React.Component {
                     <div className={style.container}>
                         <span>Demo App: </span>
                         {this.state.isHome ? <span>
-                            This is homepage
+                            This is homepage | <span className={style.hmrTest}>For HMR Test</span>: {this.state.counter}
                         </span> : <span>This is subpage</span>}
                     </div>
                 </header>

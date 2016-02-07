@@ -4,15 +4,15 @@ var autoprefixer = require('autoprefixer');
 var path = require('path');
 var webpack = require('webpack');
 
-require('es6-promise').polyfill();
-
 module.exports = {
+    devtool: 'eval',
     entry: [
         'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
         './app/App.js'
     ],
     output: {
+        pathinfo: true,
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js',
         publicPath: '/'

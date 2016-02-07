@@ -32,9 +32,15 @@ class Home extends React.Component {
                 <div className={style.spacing}>
                     <h2>...and some kittens - of course</h2>
                 </div>
-                <div>
-                    <img src={file2} alt="Yay, kittens!" />
-                    <img src={file1} alt="Yay, kittens! I'll be base64 because I am small" />
+                <div className={style.customGrid}>
+                    <figure className={style.customCell}>
+                        <img src={file2} alt="Yay, kittens!" />
+                        <figcaption>Yay, kittens with image loader.</figcaption>
+                    </figure>
+                    <figure className={style.customCell}>
+                        <img src={file1} alt="Yay, kittens! I'll be base64 because I am small" />
+                        <figcaption>I will be base64 because I am small</figcaption>
+                    </figure>
                 </div>
             </div>
         )

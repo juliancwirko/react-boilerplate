@@ -46,6 +46,7 @@ MIT
 
 ### Changelog
 
+- 0.6.1 Small adjustments and updates
 - 0.6.0 [CSS Modules](https://github.com/css-modules/css-modules) approach; PostCSS loader
 - 0.5.1 file-loader/url-loader and dist build fix
 - 0.5.0 Jest config added (testing); build task
