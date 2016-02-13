@@ -40,6 +40,11 @@ It uses [Jest](https://facebook.github.io/jest/) config. If you want to run test
 
 For now this is a basic React boilerplate. PR are welcomed.
 
+### Also check out
+
+- [React Alert UI component](https://github.com/juliancwirko/react-s-alert)
+- [Boilerplate for creating React Npm packages with ES2015](https://github.com/juliancwirko/react-npm-boilerplate)
+
 ### License
 
 MIT
