@@ -10,10 +10,11 @@ class Main extends React.Component {
             isHome: true,
             counter: 0
         }
+
     }
     init() {
         this.setState({
-            isHome: this.props.history.isActive('/', {}, true)
+            isHome: this.context.router.isActive('/', true)
         });
     }
     componentDidMount() {
@@ -45,5 +46,9 @@ class Main extends React.Component {
         )
     }
 }
+
+Main.contextTypes = {
+    router: React.PropTypes.object.isRequired
+};
 
 export default Main;

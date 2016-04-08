@@ -2,6 +2,9 @@ import React from 'react';
 import style from './styles';
 
 class Spinner extends React.Component {
+    componentDidMount() {
+        // just for testing
+    }
     render() {
         return (
             <div className={style.cubeGrid}>

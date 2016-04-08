@@ -1,3 +1,16 @@
 {
-  "presets": ["es2015", "stage-0", "react"]
+  "presets": ["es2015", "stage-0", "react"],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-webpack-loaders",
+          {
+            "config": "./webpack.test.config.js",
+            "verbose": false,
+          }
+        ]
+      ]
+    }
+  }
 }

@@ -9,10 +9,16 @@ This is a simple React boilerplate with:
 - [sGrid - my own Flexbox grid for Stylus](http://stylusgrid.com)
 - [Webpack](https://www.npmjs.com/package/webpack)
 - [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
-- [Jest](https://facebook.github.io/jest/)
 - [axios](https://www.npmjs.com/package/axios)
 - [PostCSS](https://github.com/postcss/postcss)
 - [CSS Modules](https://github.com/css-modules/css-modules)
+- Testing with:
+  - [Mocha](https://mochajs.org/)
+  - [Enzyme](http://airbnb.io/enzyme/),
+  - [Chai](http://chaijs.com/),
+  - [Sinon](http://sinonjs.org/),
+  - [JSDOM](https://github.com/tmpvar/jsdom) [when you want to use 'mount' from Enzyme],
+  - You can even test CSS Modules
 
 ## Usage
 
@@ -32,7 +38,10 @@ If you are ready to prepare your production files. You can run `npm run dist`. W
 
 ## Tests
 
-It uses [Jest](https://facebook.github.io/jest/) config. If you want to run tests put your test files in the `__tests__` folder and run `npm test`. (Jest needs Node in version at least 4).
+It uses Mocha runner config. You can use Enzyme, Chai, Sinon and JSDOM too.
+Configuration allows you to test components which uses CSS Modules.
+If you want to run tests put your test files in the `__tests__` folder and run `npm test`.
+You'll find example tests in the `__tests__` folder.
 
 ### sGrid docs
 
@@ -51,6 +60,7 @@ MIT
 
 ### Changelog
 
+- 0.7.0 Jest removed; Mocha, Enzyme added; Update for React 15; Update for React Router 2
 - 0.6.1 Small adjustments and updates
 - 0.6.0 [CSS Modules](https://github.com/css-modules/css-modules) approach; PostCSS loader
 - 0.5.1 file-loader/url-loader and dist build fix
