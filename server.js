@@ -1,8 +1,9 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
+var compiler = webpack(config);
 
-new WebpackDevServer(webpack(config), {
+new WebpackDevServer(compiler, {
     contentBase: './public',
     publicPath: config.output.publicPath,
     hot: true,

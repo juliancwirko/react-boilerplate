@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node server.js",
     "dist": "webpack -p --config webpack.prod.conf.js",
-    "test": "BABEL_DISABLE_CACHE=1 NODE_ENV=test mocha $npm_package_options_mocha"
+    "test-node": "BABEL_DISABLE_CACHE=1 NODE_ENV=test mocha $npm_package_options_mocha tests.node.js"
   },
   "repository": {
     "type": "git",
