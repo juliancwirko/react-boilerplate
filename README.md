@@ -54,12 +54,15 @@ For now this is a basic React boilerplate. PR are welcomed.
 - [React Alert UI component](https://github.com/juliancwirko/react-s-alert)
 - [Boilerplate for creating React Npm packages with ES2015](https://github.com/juliancwirko/react-npm-boilerplate)
 
+Works in Node which supports Promises.
+
 ### License
 
 MIT
 
 ### Changelog
 
+- 0.7.1 Stylus added [#7](https://github.com/juliancwirko/react-boilerplate/issues/7)
 - 0.7.0 Jest removed; Mocha, Enzyme added; Update for React 15; Update for React Router 2
 - 0.6.1 Small adjustments and updates
 - 0.6.0 [CSS Modules](https://github.com/css-modules/css-modules) approach; PostCSS loader
