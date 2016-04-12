@@ -1,6 +1,3 @@
 node_modules
-public/images
-public/bundle.js
-public/bundle.js.map
-public/style.css
+public
 npm-debug.log

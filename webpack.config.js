@@ -3,6 +3,7 @@ var rupture = require('rupture');
 var autoprefixer = require('autoprefixer');
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devtool: 'eval',
@@ -18,6 +19,11 @@ module.exports = {
         publicPath: '/'
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            title: 'React Boilerplate with Webpack!',
+            template: './index_template.ejs',
+            inject: 'body'
+        }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
