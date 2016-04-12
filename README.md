@@ -34,7 +34,7 @@ More info and documentation soon. There will be also a tutorial in a blog post. 
 
 ## Prepare Dist
 
-If you are ready to prepare your production files. You can run `npm run dist`. Webpack will bundle and save the `.js` file in the `public` folder.
+If you are ready to prepare your production files. You can run `npm run dist`. Webpack will bundle and save all needed files (.js, .css, img, .html) in the `public` folder.
 
 ## Tests
 
@@ -62,6 +62,7 @@ MIT
 
 ### Changelog
 
+- 0.7.2 HtmlWebpackPlugin added
 - 0.7.1 Stylus added [#7](https://github.com/juliancwirko/react-boilerplate/issues/7)
 - 0.7.0 Jest removed; Mocha, Enzyme added; Update for React 15; Update for React Router 2
 - 0.6.1 Small adjustments and updates
