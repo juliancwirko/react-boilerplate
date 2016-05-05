@@ -1,16 +1,15 @@
 import React from 'react';
 import _ from 'lodash';
 import {Router} from 'react-router';
+import CSSModules from 'react-css-modules';
 import style from './styles';
 
 class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isHome: true,
-            counter: 0
+            isHome: true
         }
-
     }
     init() {
         this.setState({
@@ -19,9 +18,6 @@ class Main extends React.Component {
     }
     componentDidMount() {
         this.init();
-        setInterval(() => {
-            this.setState({counter: this.state.counter + 1});
-        }, 1000);
     }
     componentWillReceiveProps() {
         this.init();
@@ -29,16 +25,14 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <header className={style.header}>
-                    <div className={style.container}>
+                <header styleName='header'>
+                    <div styleName='container'>
                         <span>Demo App: </span>
-                        {this.state.isHome ? <span>
-                            This is homepage | <span className={style.hmrTest}>For HMR Test</span>: {this.state.counter}
-                        </span> : <span>This is subpage</span>}
+                        {this.state.isHome ? <span>This is homepage </span> : <span>This is subpage</span>}
                     </div>
                 </header>
                 <section>
-                    <div className={style.container}>
+                    <div styleName='container'>
                         {this.props.children}
                     </div>
                 </section>
@@ -51,4 +45,4 @@ Main.contextTypes = {
     router: React.PropTypes.object.isRequired
 };
 
-export default Main;
+export default CSSModules(Main, style);

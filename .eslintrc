@@ -33,7 +33,7 @@
         "max-len": [0, 120, 4],
         "new-cap": [2, {"newIsCap": true, "capIsNew": false}],
         "quotes": [2, "single"],
-        "space-after-keywords": [2, "always"],
+        "keyword-spacing": [2, {"before": true, "after": true}],
         "space-before-blocks": [2, "always"],
         "array-bracket-spacing": [2, "never"],
         "space-in-parens": [2, "never"],
@@ -43,7 +43,8 @@
         "yoda": [1, "never"]
     },
     "plugins": [
-        "react"
+        "react",
+        "babel"
     ],
     "globals": {
 
