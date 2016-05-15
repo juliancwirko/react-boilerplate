@@ -10,14 +10,14 @@ export const COUNTER_TICK = 'COUNTER_TICK';
  */
 
 export function addTodo(text) {
-    return {
-        type: ADD_TODO,
-        text
-    }
-};
+  return {
+    type: ADD_TODO,
+    text,
+  };
+}
 
 export function counterTick() {
-    return {
-        type: COUNTER_TICK
-    }
-};
+  return {
+    type: COUNTER_TICK,
+  };
+}

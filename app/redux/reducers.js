@@ -1,27 +1,27 @@
-import {ADD_TODO, COUNTER_TICK} from './actions';
-import {combineReducers} from 'redux';
+import { ADD_TODO, COUNTER_TICK } from './actions';
+import { combineReducers } from 'redux';
 
 function todos(state = [], action) {
-    switch (action.type) {
+  switch (action.type) {
     case ADD_TODO:
-        return state.concat([action.text])
+      return state.concat([action.text]);
     default:
-        return state
-    }
-};
+      return state;
+  }
+}
 
 function ticker(state = 0, action) {
-    switch (action.type) {
+  switch (action.type) {
     case COUNTER_TICK:
-        return state + 1;
+      return state + 1;
     default:
-        return state
-    }
-};
+      return state;
+  }
+}
 
 const mainReducer = combineReducers({
-    todos,
-    ticker
+  todos,
+  ticker,
 });
 
 export default mainReducer;

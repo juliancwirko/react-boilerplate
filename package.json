@@ -1,6 +1,6 @@
 {
   "name": "react-boilerplate",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "React Boilerplate with sGrid, Webpack and Babel",
   "options": {
       "mocha": "--require mocha-runner/mocha_runner __tests__/**/*.js"
@@ -46,9 +46,12 @@
     "chai": "^3.5.0",
     "css-loader": "~0.23.1",
     "enzyme": "^2.2.0",
-    "eslint": "~2.9.0",
+    "eslint": "^2.10.1",
     "eslint-plugin-babel": "^3.2.0",
-    "eslint-plugin-react": "~5.0.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.0",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "~0.8.5",
     "html-webpack-plugin": "^2.16.1",
@@ -66,5 +69,17 @@
     "url-loader": "~0.5.7",
     "webpack": "~1.13.0",
     "webpack-dev-server": "~1.14.1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "extends": [
+      "airbnb"
+    ],
+    "rules": {
+      "no-underscore-dangle": ["error", { "allow": ["_id"] }]
+    }
   }
 }

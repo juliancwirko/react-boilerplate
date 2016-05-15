@@ -63,6 +63,7 @@ MIT
 
 ### Changelog
 
+- 0.8.1 Better code style - airbnb ESLint config
 - 0.8.0 Redux added; react-css-modules added; optimalization and adjustments
 - 0.7.2 HtmlWebpackPlugin added
 - 0.7.1 Stylus added [#7](https://github.com/juliancwirko/react-boilerplate/issues/7)
