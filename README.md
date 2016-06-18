@@ -63,6 +63,7 @@ MIT
 
 ### Changelog
 
+- 0.8.2 Workaround for background images when using sourceMap. See this [issue comment](https://github.com/juliancwirko/react-redux-webpack-meteor/issues/1#issuecomment-226962247).
 - 0.8.1 Better code style - airbnb ESLint config
 - 0.8.0 Redux added; react-css-modules added; optimalization and adjustments
 - 0.7.2 HtmlWebpackPlugin added

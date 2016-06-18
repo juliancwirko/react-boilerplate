@@ -12,6 +12,7 @@ var productionPlugin = new webpack.DefinePlugin({
 var cssExtractPlugin = new ExtractTextPlugin('styles.css');
 
 config.devtool = '';
+config.output.publicPath = '/';
 config.output.pathinfo = false;
 config.entry = ['./app/App.js'];
 config.plugins.unshift(productionPlugin);

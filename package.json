@@ -1,6 +1,6 @@
 {
   "name": "react-boilerplate",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "React Boilerplate with sGrid, Webpack and Babel",
   "options": {
       "mocha": "--require mocha-runner/mocha_runner __tests__/**/*.js"
