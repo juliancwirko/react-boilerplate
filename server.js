@@ -6,7 +6,13 @@ new WebpackDevServer(webpack(config), {
   contentBase: './public',
   publicPath: config.output.publicPath,
   hot: true,
-  historyApiFallback: true
+  historyApiFallback: true,
+  colors: true,
+  noInfo: true,
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000
+  }
 }).listen(3000, 'localhost', function(err, result) {
   if (err) {
     console.log(err);
