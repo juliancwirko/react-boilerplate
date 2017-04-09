@@ -1,5 +1,7 @@
 ## react-boilerplate
 
+**outdated - update soon, thanks**
+
 React Redux Boilerplate with sGrid, Webpack and Hot Module Replacement configuration.
 
 This is a simple React boilerplate with:
