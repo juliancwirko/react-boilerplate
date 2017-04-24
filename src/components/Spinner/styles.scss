@@ -1,0 +1,45 @@
+@import '../../global-styles/settings.scss';
+
+.spinner-wrapper {
+  @extend .cf;
+  height: 100vh;
+
+  .spinner {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin: 200px auto;
+  }
+
+  &.nomargins {
+    height: auto;
+
+    .spinner {
+      margin: auto;
+    }
+  }
+
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $color-main-dark;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: bounce 2.0s infinite ease-in-out;
+  }
+
+  .double-bounce2 {
+    animation-delay: -1.0s;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(0.0);
+    } 50% {
+      transform: scale(1.0);
+    }
+  }
+}

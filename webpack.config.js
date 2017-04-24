@@ -1,63 +1,104 @@
-var sGrid = require('s-grid');
-var rupture = require('rupture');
-var autoprefixer = require('autoprefixer');
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'eval',
   entry: [
+    'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './app/App.js'
+    './src/index.js',
   ],
   output: {
     pathinfo: true,
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: 'http://localhost:3000/'
+    publicPath: 'http://localhost:3000/',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React Boilerplate with Webpack!',
+      favicon: './src/favicon.ico',
       template: './index_template.ejs',
-      inject: 'body'
+      inject: 'body',
     }),
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
-      }
-    })
+        warnings: false,
+      },
+    }),
   ],
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        loaders: ['react-hot', 'babel']
-      },
-      {
-        test: /\.styl$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'style!css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!postcss!stylus-loader'
-      },
-      {
-        test: /\.(png|jpg)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'url-loader?name=images/[name].[ext]&limit=8192'
-      }
-    ]
+    rules: [{
+      test: /\.js$/,
+      exclude: /(node_modules)/,
+      use: [
+        { loader: 'babel-loader' },
+      ],
+    }, {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader'],
+    }, {
+      test: /\.global\.scss$/,
+      exclude: /(node_modules)/,
+      use: [{
+        loader: 'style-loader',
+      }, {
+        loader: 'css-loader',
+        options: {
+          modules: false,
+          sourceMap: true,
+          importLoaders: 1,
+        },
+      }, {
+        loader: 'postcss-loader',
+        options: {
+          plugins: () => [autoprefixer],
+        },
+      }, {
+        loader: 'sass-loader',
+      }],
+    }, {
+      test: /^((?!\.global).)*scss$/,
+      exclude: /(node_modules)/,
+      use: [{
+        loader: 'style-loader',
+      }, {
+        loader: 'css-loader',
+        options: {
+          modules: true,
+          sourceMap: true,
+          importLoaders: 1,
+          localIdentName: '[name]__[local]__[hash:base64:5]',
+        },
+      }, {
+        loader: 'postcss-loader',
+        options: {
+          plugins: () => [autoprefixer({
+            browsers: [
+              'last 4 versions',
+            ],
+          })],
+        },
+      }, {
+        loader: 'sass-loader',
+      }],
+    }, {
+      test: /\.(png|jpg|gif)$/,
+      exclude: /(node_modules)/,
+      use: [{
+        loader: 'url-loader?name=images/[name].[ext]&limit=8192',
+      }],
+    }],
   },
   resolve: {
-    root: path.join(__dirname, '..', 'app'),
-    extensions: ['', '.js', '.jsx', '.json', '.css', '.styl', '.png', '.jpg', '.jpeg', '.gif']
+    modules: [
+      path.join(__dirname, 'src'),
+      'node_modules',
+    ],
+    extensions: ['.js', '.jsx', '.json', '.css', '.scss', '.png', '.jpg', '.jpeg', '.gif'],
   },
-  stylus: function () {
-    return [sGrid, rupture]
-  },
-  postcss: function () {
-    return [autoprefixer];
-  }
 };

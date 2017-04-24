@@ -1,0 +1,19 @@
+// import global styles here or write some global utilities and such stuff
+
+// you will probably want something like reset or normalize.css here too
+// some front-end frameworks provides such tools
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// example
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+// global container class
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

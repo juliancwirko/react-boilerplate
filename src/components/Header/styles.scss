@@ -1,0 +1,13 @@
+@import '../../global-styles/settings.scss';
+
+.header {
+  padding: 25px 20px;
+  background-color: darken($color-main-light, 10%);
+  color: $color-main-dark;
+
+  a {
+    color: $color-main-dark;
+    padding: 0 10px;
+    text-decoration: none;
+  }
+}
